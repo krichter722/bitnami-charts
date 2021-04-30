@@ -23,4 +23,5 @@ spec:
       targetPort: metrics
   selector: {{- include "common.labels.matchLabels" . | nindent 4 }}
     app.kubernetes.io/component: postgresql
+  ipFamilies: ["IPv6"]
 {{- end }}
